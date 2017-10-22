@@ -1,0 +1,43 @@
+#logo {
+  margin-left: 20px;
+}
+header {
+  background-image: url(../img/hero.jpg);
+  height: 400px;
+  color: white;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.iconHeading {
+  display: inline;
+}
+
+i {
+  vertical-align: bottom;
+}
+
+#ordering {
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form {
+  margin-top: 60px;
+}
+
+#formDiv {
+  border: 1px solid pink;
+  border-bottom: pink;
+}
+
+/* TODO: FIGURE OUT HOW TO USE THIS CODE BELOW TO CHANGE FORM LINES */
+/*.input-field input[type=text]:focus + label {
+     color: pink;
+
+.input-field input[type=text]:focus {
+     border-bottom: 1px solid pink;
+     box-shadow: 0 1px 0 0 pink;
+   }*/

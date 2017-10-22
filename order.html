@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Order Delivery</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  </head>
+
+  <body>
+
+<!-- START: NAVIGATION BAR -->
+    <nav>
+      <div class="nav-wrapper blue darken-3">
+        <a href="./index.html" class="brand-logo" id='logo'>Galvanize Delivers</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="./order.html">Order Delivery</a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </div>
+    </nav>
+<!-- END: NAVIGATION BAR -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6">
+
+<!-- START: MENU ITEMS -->
+          <h3>MENU</h3>
+          <div class="row">
+            <div class="col s12 m6">
+              <!-- BURGER CARD -->
+              <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="./img/burger.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Royale with Cheese<i class="material-icons right">more_vert</i></span>
+                  <p>$<span id="burgerPrice">8.99</span></p>
+                  <p><a href="#" name='burgerButton' onclick="burgerButtonClick()">Add to order</a></p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Royale with Cheese<i class="material-icons right">close</i></span>
+                  <p>A quarter-pound of 100% real North American ground beef and the freshest premium toppings on a warm toasted bun.</p>
+                </div>
+              </div>
+
+              <!-- PIE CARD -->
+              <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="./img/pizza.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Arugula Pie<i class="material-icons right">more_vert</i></span>
+                  <p>$11.99</p>
+                  <p><a href="#">Add to order</a></p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Arugula Pie<i class="material-icons right">close</i></span>
+                  <p>A superb green pie (Greek Hortopita) that combines the tasty leafy greens and the unique flavour of Greek cheeses, wrapped in a crispy phyllo dough!</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 m6">
+              <!-- SWINE CARD -->
+              <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="./img/ribs.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Smoked Swine<i class="material-icons right">more_vert</i></span>
+                  <p>$14.99</p>
+                  <p><a href="#">Add to order</a></p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Smoked Swine<i class="material-icons right">close</i></span>
+                  <p>Hand-rubbed with our secret blend of spices, pit-smoked for 3-4 hours and slathered with sauce to seal in the flavor with a crispy, caramelized coating.</p>
+                </div>
+              </div>
+
+              <!-- ICE CREAM CARD -->
+              <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="./img/ice_cream.jpg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Ice Cream Biscuit<i class="material-icons right">more_vert</i></span>
+                  <p>$7.99</p>
+                  <p><a href="#">Add to order</a></p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">Ice Cream Biscuit<i class="material-icons right">close</i></span>
+                  <p>An ice cream sandwich is a frozen dessert consisting of ice cream between two wafers, cookies, or other similar biscuit.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+<!-- END: MENUE ITMES -->
+
+        </div>
+
+
+<!-- START: ORDER SUMMARY -->
+        <div class="col s12 m6">
+          <h3>ORDER</h3>
+          <table class="striped" id="placedOrders">
+            <thead>
+              <tr>
+                  <th>Item</th>
+                  <th>Price</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+
+              <!-- <tr>
+                <td>Royale with Cheese</td>
+                <td>$ <u id='buregerAccum'>0.87</u></td>
+              </tr>
+              <tr>
+                <td>Alan</td>
+                <td>$3.76</td>
+              </tr>
+              <tr>
+                <td>Jonathan</td>
+                <td>$7.00</td>
+              </tr> -->
+            </tbody>
+          </table>
+<!-- END: ORDER SUMMARY -->
+
+
+<!-- START: ORDER FORM -->
+<!-- TODO: STILL NEED TO CHANGE THE LINE COLOR TO GREEN -->
+          <div class="form">
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix pink-text">account_circle</i>
+                <input value="Alvin" id="nameIcon" type="text" class="validate">
+                <label class="active" for="nameIcon">First Name</label>
+              </div>
+
+              <div class="input-field col s12">
+                <i class="material-icons prefix pink-text">phone</i>
+                <input value="555-555-5555" id="phoneIcon" type="text" class="validate">
+                <label class="active" for="phoneIcon">Phone Number</label>
+              </div>
+
+              <div class="input-field col s12">
+                <i class="material-icons prefix pink-text">business</i>
+                <input value="1600 Amphitheatre Pkwy, Mountain View, CA 94043" id="addressIcon" type="text" class="validate">
+                <label class="active" for="addressIcon">Address</label>
+              </div>
+            </div>
+          </div>
+<!-- END: ORDER FORM -->
+
+        </div>
+      </div>
+
+    </div>
+
+
+<!-- START: FOOTER -->
+      <footer class="page-footer blue darken-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Galvanize Delivers</h5>
+                <p class="grey-text text-lighten-4">Fine Dinning, Delivered.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="./index.html">Home</a></li>
+                  <li><a class="grey-text text-lighten-3" href="./order.html">Order Delivery</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Marie Walker
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+      </footer>
+<!-- END: FOOTER -->
+
+    <script type="text/javascript" src="./js/app.js">
+
+    </script>
+  </body>
+</html>
